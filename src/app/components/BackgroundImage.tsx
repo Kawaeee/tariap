@@ -31,17 +31,9 @@ function BackgroundImage() {
   }
 
   return (
-    <div
-      className="background-image-container"
-      style={{
-        backgroundImage: `url(${imageUrl})`,
-        backgroundSize: backgroundSize,
-        backgroundRepeat: backgroundRepeat,
-      }}
-    >
-      <button className="fixed bottom-5 right-5 h-20 w-20 rounded-full bg-gray-800 border border-gray-700" onClick={handleToggleVisibility}>⚙️</button>
-      {toggleVisibility && (
-        <div className="fixed bottom-24 right-24 rounded-lg max-w-sm p-6 bg-gray-800 border border-gray-700">
+    <div className="background-image-container" style={{ backgroundImage: `url(${imageUrl})`, backgroundSize: backgroundSize, backgroundRepeat: backgroundRepeat, }}>
+      <button className="fixed bottom-5 right-5 h-20 w-20 rounded-full border border-gray-700 bg-gradient-to-r from-indigo-500 shadow-lg hover:shadow-xl" onClick={handleToggleVisibility}>⚙️</button>
+      <div className={`fixed bottom-24 right-24 rounded-lg max-w-sm p-6 bg-gray-800 border border-gray-700 ${toggleVisibility ? "opacity-100" : "opacity-0"} transition-opacity duration-500`}>
           <label className="block text-gray-300 mb-2">
             Background Image:
             <input type="file" onChange={handleBackgroundImage} className="mt-1 block w-full rounded-md border-gray-700 bg-gray-900 focus:outline-none focus:border-indigo-500 focus:shadow-outline-indigo sm:text-sm sm:leading-5" />
@@ -52,6 +44,7 @@ function BackgroundImage() {
               <option value="cover">Cover</option>
               <option value="contain">Contain</option>
               <option value="auto">Auto</option>
+              <option value="25%">25%</option>
               <option value="50%">50%</option>
               <option value="100%">100%</option>
             </select>
@@ -63,9 +56,12 @@ function BackgroundImage() {
               <option value="repeat">Repeat</option>
             </select>
           </label>
-        </div>
-      )
-      }
+      </div>
+      <footer>
+        <span className="absolute inset-x-0 bottom-0 text-sm text-gray-400 sm:text-center">
+          © 2023 <a href="https://github.com/Kawaeee/tariap" target="_blank" className="hover:underline">Kawaeee</a>. All Rights Reserved.
+        </span>
+      </footer>
       <style jsx>{`
         .background-image-container {
           width: 100%;
