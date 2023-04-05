@@ -1,21 +1,23 @@
-# TARIAP
+# TARIAP 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FKawaeee%2Ftariap)
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This repository represent how I learn how to [Next.js](https://nextjs.org/) with [Tailwind CSS](https://tailwindcss.com/) and [tsparticles](https://github.com/matteobruni/tsparticles) by create a meme web application.
 
 ## Project Setup
-
-```sh
+```bash
 npm install
 ```
 
 ### Compile and Hot-Reload for Development
-
-```sh
+```bash
 npm run dev
 ```
 
 ### Type-Check, Compile and Minify for Production
-
-```sh
+```bash
 npm run build
 ```
+
+#### Note:
+- Whenever you deploy this repository on Vercel, don't forget to change output directory to `./dist`
+- tsparticles on Next.js does not fully support yet, so I did the ignoreBuildErrors typescript to skip the issues.
