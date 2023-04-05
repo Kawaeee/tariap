@@ -1,8 +1,8 @@
-import './globals.css'
+import "./globals.css"
 
 export const metadata = {
-  title: 'TARIAP',
-  description: 'Simple pairat particle web application!',
+  title: "TARIAP",
+  description: "Simple pairat particle web application!",
 }
 
 export default function RootLayout({
